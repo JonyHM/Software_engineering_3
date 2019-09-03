@@ -23,12 +23,12 @@ public class Passeio implements Veiculo {
 		return this.categoria == Categoria.D ? this.valorVeiculoTransporte : this.valorVeiculoPasseio;
 	}
 
-	@Override
+	
 	public int adicionalEixos() {
 		return 1;
 	}
 
-	@Override
+	
 	public double adicionalCarga() {
 		return 0;
 	}

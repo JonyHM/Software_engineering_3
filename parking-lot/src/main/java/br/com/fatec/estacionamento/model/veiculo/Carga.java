@@ -33,12 +33,10 @@ public class Carga implements Veiculo {
 		return this.valorVeiculoCarga;
 	}
 
-	@Override
 	public int adicionalEixos() {
 		return this.eixos;
 	}
 
-	@Override
 	public double adicionalCarga() {
 		return ((this.valorCarga * 10) / 100);
 	}

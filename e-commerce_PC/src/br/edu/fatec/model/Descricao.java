@@ -60,7 +60,7 @@ public class Descricao {
 	
 	@Override
 	public String toString() {
-		return this.modelo + "; " + this.marca + "; " 
-				+ this.peso + "; " + this.tamanho + "; " + this.detalhes;
+		return ' ' + this.marca + ' ' + this.modelo + '\n' 
+				+ "Peso: " + this.peso + "\nTamanho: " + this.tamanho + "\nEspecificações: " + this.detalhes;
 	}
 }

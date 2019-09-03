@@ -6,6 +6,7 @@ import br.edu.fatec.service.CalculadorDesconto;
 public abstract class Produto {
 
 	protected String nome;
+	protected String codigo;
 	protected double valorProduto;
 	protected double valorComDesconto;
 	protected Desconto desconto;
@@ -16,6 +17,10 @@ public abstract class Produto {
 		return descricao;
 	}
 
+	public String getCodigo() {
+		return this.codigo;
+	}
+	
 	public void setDescricao(Descricao descricao) {
 		this.descricao = descricao;
 	}
@@ -45,9 +50,7 @@ public abstract class Produto {
 		return this;
 	}
 	
-	public void calculaValor() {
-		this.valorComDesconto = this.calculador.calcula(this.desconto);
-	}
+	public abstract void calculaValor();
 
 	public double getValorComDesconto() {
 		return this.valorComDesconto;
