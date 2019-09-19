@@ -7,24 +7,33 @@ import br.edu.fatec.model.Descricao;
 import br.edu.fatec.model.Produto;
 import br.edu.fatec.model.ProdutoComposto;
 import br.edu.fatec.model.ProdutoUnitario;
+import br.edu.fatec.service.CalculadorDesconto;
 
 public class App {
 
 	public static void main(String[] args) {
 		
+		System.out.println("\n");
+		System.out.println("----------------------------------------------------------------------------------------------------");
+		System.out.println("\n");
+		
 		// Notebook
 		Descricao descricaoNotebook = new Descricao("550P", "Lenovo", "1,092", "45x40", "8Gb RAM, 1 TB HD, i7");
 		Produto notebook = new ProdutoUnitario("Notebook", "050026", 3500.0, descricaoNotebook);
 		
+		CalculadorDesconto calculador = new CalculadorDesconto(notebook);
+		
 		Desconto descontoNotebook = new Desconto();
-		descontoNotebook.setValorDesconto(20000d);
+		double valorDesconto = 20000;
+		
+		descontoNotebook.setValorDesconto(valorDesconto);
 		String mensagem = "";
 		
 		System.out.println(notebook.getNome() + notebook.getDescricao());
 		System.out.println("\nValor original: " + notebook.getValorProduto());
 		
 		try {
-			notebook.setDesconto(descontoNotebook).calculaValor();
+			notebook.calculaValor(calculador, descontoNotebook);
 		} catch (Exception e) {
 			mensagem = e.getMessage();
 		}
@@ -42,6 +51,8 @@ public class App {
 		Descricao descricaoMouse = new Descricao("75G24", "Logitec", "221", "12x6", "Indicação de LED, níveis de precisão");
 		Produto mouse = new ProdutoUnitario("Mouse Gamer", "572468", 254.0, descricaoMouse);
 		
+		calculador = new CalculadorDesconto(mouse);
+		
 		Desconto descontoMouse = new Desconto();
 		descontoMouse.setPorcentagem(10);
 		mensagem = "";
@@ -50,7 +61,7 @@ public class App {
 		System.out.println("\nValor original: " + mouse.getValorProduto());
 		
 		try {
-			mouse.setDesconto(descontoMouse).calculaValor();
+			mouse.calculaValor(calculador, descontoMouse);
 		} catch (Exception e) {
 			mensagem = e.getMessage();
 		}
@@ -75,6 +86,8 @@ public class App {
 		
 		Produto kit = new ProdutoComposto(Arrays.asList(note, rato));
 		
+		calculador = new CalculadorDesconto(kit);
+		
 		Desconto descontoKit = new Desconto();
 		descontoKit.setPorcentagem(10);
 		mensagem = "";
@@ -83,7 +96,7 @@ public class App {
 		System.out.println("\nValor original: " + kit.getValorProduto());
 		
 		try {
-			kit.setDesconto(descontoKit).calculaValor();
+			kit.calculaValor(calculador, descontoKit);
 		} catch (Exception e) {
 			mensagem = e.getMessage();
 		}
@@ -92,6 +105,10 @@ public class App {
 								? "Valor com desconto: " + kit.getValorComDesconto()
 								: mensagem
 						);
+		
+		System.out.println("\n");
+		System.out.println("----------------------------------------------------------------------------------------------------");
+		System.out.println("\n");
 		
 	}
 }

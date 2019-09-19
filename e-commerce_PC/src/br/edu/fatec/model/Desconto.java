@@ -22,5 +22,4 @@ public class Desconto {
 		this.valorDesconto = valorDesconto;
 		this.porcentagem = 0;
 	}
-	
 }

@@ -10,13 +10,11 @@ public class ProdutoUnitario extends Produto {
 		this.codigo = codigo;
 		this.valorProduto = valorProduto;
 		this.descricao = descricao;
-		this.desconto = new Desconto();
-		this.calculador = new CalculadorDesconto(this);
 	}
 	
 	@Override
-	public void calculaValor() {
-		this.valorComDesconto = this.calculador.calcula(this.desconto);
+	public void calculaValor(CalculadorDesconto calculador, Desconto desconto) {
+		this.valorComDesconto = calculador.calcula(desconto);
 	}
 	
 }

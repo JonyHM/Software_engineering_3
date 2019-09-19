@@ -9,9 +9,7 @@ public abstract class Produto {
 	protected String codigo;
 	protected double valorProduto;
 	protected double valorComDesconto;
-	protected Desconto desconto;
 	protected Descricao descricao;
-	protected CalculadorDesconto calculador;
 	
 	public Descricao getDescricao() {
 		return descricao;
@@ -41,16 +39,7 @@ public abstract class Produto {
 		this.valorProduto = valorProduto;
 	}
 	
-	public Desconto getDesconto() {
-		return desconto;
-	}
-
-	public Produto setDesconto(Desconto desconto) {
-		this.desconto = desconto;
-		return this;
-	}
-	
-	public abstract void calculaValor();
+	public abstract void calculaValor(CalculadorDesconto calculador, Desconto desconto);
 
 	public double getValorComDesconto() {
 		return this.valorComDesconto;

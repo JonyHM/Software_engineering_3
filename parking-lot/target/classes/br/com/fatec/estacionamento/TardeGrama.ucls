@@ -4,7 +4,7 @@
   <class id="1" language="java" name="br.com.fatec.estacionamento.model.tempo.Segundo" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/tempo/Segundo.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="96" width="276" x="2405" y="297"/>    
+    <position height="81" width="190" x="486" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -14,7 +14,7 @@
   <class id="2" language="java" name="br.com.fatec.estacionamento.service.CalculoValor" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/CalculoValor.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1633" y="65"/>    
+    <position height="189" width="199" x="2201" y="492"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -24,7 +24,7 @@
   <class id="3" language="java" name="br.com.fatec.estacionamento.service.ValorDia" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/ValorDia.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1460" y="389"/>    
+    <position height="135" width="190" x="2042" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -34,7 +34,7 @@
   <class id="4" language="java" name="br.com.fatec.estacionamento.service.ValorMes" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/ValorMes.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1689" y="391"/>    
+    <position height="117" width="190" x="2272" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -44,7 +44,7 @@
   <class id="5" language="java" name="br.com.fatec.estacionamento.resource.MiliParaHora" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/resource/MiliParaHora.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="176" width="251" x="2730" y="-335"/>    
+    <position height="153" width="183" x="723" y="191"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -54,7 +54,7 @@
   <class id="6" language="java" name="br.com.fatec.estacionamento.model.tempo.Hora" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/tempo/Hora.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="96" width="276" x="2721" y="297"/>    
+    <position height="81" width="190" x="716" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -64,7 +64,7 @@
   <class id="7" language="java" name="br.com.fatec.estacionamento.model.tempo.Dia" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/tempo/Dia.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="96" width="276" x="3037" y="297"/>    
+    <position height="81" width="190" x="946" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -74,7 +74,7 @@
   <class id="8" language="java" name="br.com.fatec.estacionamento.resource.HoraParaMili" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/resource/HoraParaMili.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="176" width="251" x="3021" y="-335"/>    
+    <position height="153" width="183" x="946" y="191"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   <interface id="9" language="java" name="br.com.fatec.estacionamento.model.veiculo.Veiculo" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/veiculo/Veiculo.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1135" y="245"/>    
+    <position height="117" width="194" x="1808" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -94,7 +94,7 @@
   <class id="10" language="java" name="br.com.fatec.estacionamento.model.veiculo.Passeio" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/veiculo/Passeio.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="176" width="281" x="334" y="1"/>    
+    <position height="153" width="194" x="1406" y="492"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -104,7 +104,7 @@
   <class id="11" language="java" name="br.com.fatec.estacionamento.service.ValorFinal" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/ValorFinal.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1938" y="399"/>    
+    <position height="117" width="190" x="2502" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -114,316 +114,257 @@
   <class id="12" language="java" name="br.com.fatec.estacionamento.service.ValorHora" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/ValorHora.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2021" y="223"/>    
+    <position height="117" width="190" x="2732" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="br.com.fatec.estacionamento.model.Valor" project="estacionamento" 
+  <class id="13" language="java" name="br.com.fatec.estacionamento.App" project="estacionamento" 
+    file="/estacionamento/src/main/java/br/com/fatec/estacionamento/App.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="133" x="1426" y="191"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="br.com.fatec.estacionamento.model.Valor" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/Valor.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="216" width="233" x="334" y="297"/>    
+    <position height="189" width="161" x="1406" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="14" language="java" name="br.com.fatec.estacionamento.model.Categoria" project="estacionamento" 
+  <enumeration id="15" language="java" name="br.com.fatec.estacionamento.model.Categoria" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/Categoria.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="156" width="233" x="607" y="297"/>    
+    <position height="135" width="161" x="1607" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="15" language="java" name="br.com.fatec.estacionamento.model.tempo.MedidasTempo" project="estacionamento" 
+  <class id="16" language="java" name="br.com.fatec.estacionamento.model.tempo.MedidasTempo" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/tempo/MedidasTempo.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="196" width="276" x="2876" y="1"/>    
+    <position height="171" width="190" x="834" y="492"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="br.com.fatec.estacionamento.model.tempo.Minuto" project="estacionamento" 
+  <class id="17" language="java" name="br.com.fatec.estacionamento.model.tempo.Minuto" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/tempo/Minuto.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="96" width="276" x="3353" y="297"/>    
+    <position height="81" width="190" x="1176" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="br.com.fatec.estacionamento.service.Conta" project="estacionamento" 
+  <class id="18" language="java" name="br.com.fatec.estacionamento.service.Conta" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/service/Conta.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="296" width="240" x="957" y="-335"/>    
+    <position height="261" width="167" x="1855" y="191"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="br.com.fatec.estacionamento.model.veiculo.Carga" project="estacionamento" 
+  <class id="19" language="java" name="br.com.fatec.estacionamento.model.veiculo.Carga" project="estacionamento" 
     file="/estacionamento/src/main/java/br/com/fatec/estacionamento/model/veiculo/Carga.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="256" width="281" x="655" y="1"/>    
+    <position height="225" width="194" x="1640" y="492"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="19">    
+  <generalization id="20">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="20">    
-    <bendpoint x="966" y="1"/>    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="21" name="veiculo">        
-        <position height="0" width="0" x="115" y="-120"/>      
-      </attribute>      
-      <multiplicity id="22" minimum="0" maximum="1">        
-        <position height="0" width="0" x="115" y="-120"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="24" name="valorVeiculoCarga">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="25" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="27" name="horas">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="30" name="dias">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="31" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="33" name="minutos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="35">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="36" name="segundos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="37" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="38">    
+  <association id="21">    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="39" name="valorVeiculoTransporte">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="40" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="42" name="veiculo">        
-        <position height="0" width="0" x="115" y="-120"/>      
-      </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="115" y="-120"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="15"/>  
-  </generalization>  
-  <association id="45">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="46" name="proximoCalculo">        
-        <position height="0" width="0" x="89" y="-45"/>      
-      </attribute>      
-      <multiplicity id="47" minimum="0" maximum="1">        
-        <position height="0" width="0" x="89" y="-45"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="49">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="50" name="categoria">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="51" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="52">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="53">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="55">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="56" name="calculo">        
-        <position height="0" width="0" x="89" y="-45"/>      
-      </attribute>      
-      <multiplicity id="57" minimum="0" maximum="1">        
-        <position height="0" width="0" x="89" y="-45"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="58">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="59" name="horas">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="60" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+      <attribute id="22" name="categoria"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="61">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="15"/>  
-  </generalization>  
-  <generalization id="62">    
+  <association id="24">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="25" name="horas"/>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="27">    
     <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="15"/>  
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="63">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="64" name="segundos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="65" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="28">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="29" name="categoria"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="66">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="67">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="68" name="dias">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="69" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="70">    
+  <realization id="31">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="9"/>  
   </realization>  
-  <association id="71">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="72" name="categoria">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="73" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="32">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="33" name="dias"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="36" name="horas"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="39">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="40" name="proximoCalculo"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="42">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="43">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="44" name="valorVeiculoPasseio"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="74">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="75" name="valorVeiculoPasseio">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="76" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="46">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="47" name="veiculo"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="77">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="78" name="minutos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="79" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <generalization id="49">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="50">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="51" name="segundos"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <bendpoint x="1864" y="492"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="54" name="veiculo"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="57" name="minutos"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="61">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="62" name="segundos"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="65" name="minutos"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="68" name="valorVeiculoTransporte"/>      
+      <multiplicity id="69" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="70">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="71">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="72" name="dias"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="74">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="75">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="76" name="valorVeiculoCarga"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="79" name="calculo"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
