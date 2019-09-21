@@ -1,44 +1,35 @@
 package br.edu.fatec.banco.model;
 
-import java.util.Date;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@XmlAccessorType(XmlAccessType.FIELD)
 public abstract class Transaction {
 
-	@XStreamAlias("nome")
-	protected String client;
-	
-	@XStreamAlias("CPF")
+	@XmlElement(name = "nome")
+	protected String clientName;
+
+	@XmlElement(name = "CPF")
 	protected String CPF;
-	
-	@XStreamAlias("bancoRecebimento")
+
+	@XmlElement(name = "bancoRecebimento")
 	protected String receiptBank;
-	
-	@XStreamAlias("bancoPagamento")
+
+	@XmlElement(name = "bancoPagamento")
 	protected String paymentBank;
-	
-	@XStreamAlias("data")
-	protected Date paymentDate;
-	
-	@XStreamAlias("valor")
+
+	@XmlElement(name = "data")
+	protected String paymentDate;
+
+	@XmlElement(name = "valor")
 	protected Double paymentValue;
-	
-	public Transaction(String client, String CPF, String receiptBank, String paymentBank, Date paymentDate,
-			Double paymentValue) {
-		this.client = client;
-		this.CPF = CPF;
-		this.receiptBank = receiptBank;
-		this.paymentBank = paymentBank;
-		this.paymentDate = paymentDate;
-		this.paymentValue = paymentValue;
-	}
 
 }

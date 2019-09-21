@@ -1,29 +1,51 @@
 package br.edu.fatec.banco.model;
 
-import java.util.Date;
+import br.edu.fatec.banco.resource.CPFValidator;
+import com.google.gson.JsonObject;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@XStreamAlias("br.com.pageseguro.RemessaCartaoDebito")
+@Data
+@EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "br.com.pageseguro.RemessaCartaoDebito")
 public class CardTransaction extends Transaction {
-	
-	@XStreamAlias("numeroCartao")
-	private String cardNumber;
-	
-	@XStreamAlias("nomeTitular")
-	private String cardOwner;
 
-	public CardTransaction(String client, String CPF, String receiptBank, String paymentBank, Date paymentDate,
-			Double paymentValue, String cardNumber, String cardOwner) {
-		
-		super(client, CPF, receiptBank, paymentBank, paymentDate, paymentValue);
-		this.cardNumber = cardNumber;
-		this.cardOwner = cardOwner;
+	@XmlElement(name = "numeroCartao")
+	protected String cardNumber;
+
+	@XmlElement(name = "nomeTitular")
+	protected String cardOwner;
+
+	public static CardTransaction parseFromJsonObject(JsonObject object) {
+		CardTransaction debit = new CardTransaction();
+
+		String CPF = object.get("CPF").toString();
+
+		if (CPFValidator.validate(CPF)) {
+			debit.setCPF(CPF);
+		} else {
+			System.out.println("CPF " + CPF + " Inválido");
+			debit.setCPF("00000000000");
+		}
+
+		debit.setClientName(object.get("nome").toString());
+		debit.setReceiptBank(object.get("bancoRecebimento").toString());
+		debit.setPaymentBank(object.get("bancoPagamento").toString());
+		debit.setPaymentDate(object.get("data").toString());
+		debit.setPaymentValue(Double.parseDouble(object.get("valor").toString()));
+		debit.setCardNumber(object.get("numeroCartao").toString());
+		debit.setCardOwner(object.get("nomeTitular").toString());
+
+		return debit;
 	}
-	
 }

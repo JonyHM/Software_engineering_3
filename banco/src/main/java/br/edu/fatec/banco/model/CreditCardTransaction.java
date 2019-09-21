@@ -1,25 +1,50 @@
 package br.edu.fatec.banco.model;
 
-import java.util.Date;
+import br.edu.fatec.banco.resource.CPFValidator;
+import com.google.gson.JsonObject;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@XStreamAlias("br.com.pageseguro.RemessaCartaoCredito")
+@Data
+@EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "br.com.pageseguro.RemessaCartaoCredito")
 public class CreditCardTransaction extends CardTransaction {
 
-	@XStreamAlias("parcelas")
+	@XmlElement(name = "parcelas")
 	private int parcel;
-	
-	public CreditCardTransaction(String client, String CPF, String receiptBank, String paymentBank, Date paymentDate,
-			Double paymentValue, String cardNumber, String cardOwner, int parcel) {
-		
-		super(client, CPF, receiptBank, paymentBank, paymentDate, paymentValue, cardNumber, cardOwner);
-		this.parcel = parcel;
+
+	public static CreditCardTransaction parseFromJsonObject(JsonObject object) {
+		CreditCardTransaction credit = new CreditCardTransaction();
+
+		String CPF = object.get("CPF").toString();
+
+		if (CPFValidator.validate(CPF)) {
+			credit.setCPF(CPF);
+		} else {
+			System.out.println("CPF " + CPF + " Inválido");
+			credit.setCPF("00000000000");
+		}
+
+		credit.setClientName(object.get("nome").toString());
+		credit.setReceiptBank(object.get("bancoRecebimento").toString());
+		credit.setPaymentBank(object.get("bancoPagamento").toString());
+		credit.setPaymentDate(object.get("data").toString());
+		credit.setPaymentValue(Double.parseDouble(object.get("valor").toString()));
+		credit.setCardNumber(object.get("numeroCartao").toString());
+		credit.setCardOwner(object.get("nomeTitular").toString());
+		credit.setParcel(Integer.parseInt(object.get("parcelas").toString()));
+
+		return credit;
 	}
 
 }

@@ -1,18 +1,15 @@
 package br.edu.fatec.banco.resource;
 
+import br.edu.fatec.banco.model.TransactionList;
+
+import javax.xml.bind.JAXBException;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Reader {
-	
-	protected List<String> fileList = new ArrayList<String>();
 
-	public abstract void read(File file) throws FileNotFoundException, IOException;
+	protected TransactionList list = new TransactionList();
 	
-	public boolean CPFValidator() {
-		return true;
-	}
+	public abstract void read(File file) throws IOException, JAXBException;
+
 }
