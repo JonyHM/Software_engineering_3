@@ -20,7 +20,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
-			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -29,7 +28,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/media/jonathasmoraes/JHM/4º_Periodo/ES3/financeiro.jar"/>
-	<classpathentry kind="lib" path="/media/jonathasmoraes/JHM/4º_Periodo/ES3/listas/exs/parking-lot/classes/artifacts/estacionamento_jar/estacionamento.jar"/>
+	<classpathentry kind="lib" path="F:/4º_Periodo/ES3/financeiro.jar"/>
+	<classpathentry kind="lib" path="F:/4º_Periodo/ES3/listas/exs/parking-lot/classes/artifacts/estacionamento_jar/estacionamento.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
