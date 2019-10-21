@@ -8,16 +8,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Group of animals, whether bovine or Swine
+ * 
+ * @author Jonathas Moraes
+ * @author Guilherme Cursino
+ *
+ */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-/**
- * Group of animals, whether bovine or Swine
- * @author Aluno
- *
- */
 public class AnimalGroup {
 
 	private List<Animal> animals;

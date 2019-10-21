@@ -9,6 +9,7 @@ public abstract class Animal {
 
 	protected String breed;
 	protected double weight;
-	protected double kgValue;
+	protected double value;
+	protected boolean isKg;
 	
 }

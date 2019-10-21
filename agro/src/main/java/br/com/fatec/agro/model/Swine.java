@@ -6,11 +6,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * A porcine/swine animal 
+ * 
+ * @author Jonathas Moraes
+ * @author Guilherme Cursino
+ *
+ */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 public class Swine extends Animal {
 
 	private Swine ready;
@@ -49,8 +56,18 @@ public class Swine extends Animal {
 	 * @param value
 	 * @return the own object
 	 */
-	public Swine costingPerKG(double value) {
-		this.ready.setKgValue(value);
+	public Swine costing(double value) {
+		this.ready.setValue(value);
+		return this;
+	}
+	
+	/**
+	 * Declares that the base weight unity is kg. Otherwise the base is arroba 
+	 * @param isKg
+	 * @return the own object
+	 */
+	public Swine usingKgWeight(boolean isKg) {
+		this.ready.isKg = isKg;
 		return this;
 	}
 	
@@ -64,9 +81,11 @@ public class Swine extends Animal {
 	
 	@Override
 	public String toString() {
+		String weightUnity = this.isKg ? " Kg" : " Arroba";
+		
 		return "Animal species: Swine"
 				+ "\nBreed: " + this.breed 
-				+ "\nWeight: " + this.weight
-				+ "\nCost per Kg: " + this.kgValue;
+				+ "\nWeight: " + String.format("%.2f", this.weight) + weightUnity
+				+ "\nCost per" + weightUnity + ": R$ " + String.format("%.2f", this.value);
 	}
 }
