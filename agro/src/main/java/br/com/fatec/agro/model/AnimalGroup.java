@@ -1,5 +1,6 @@
 package br.com.fatec.agro.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -22,22 +23,23 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class AnimalGroup {
 
-	private List<Animal> animals;
-	private double totalPrice;
+	private List<Animal> animals = new ArrayList<Animal>();
 	
 	/**
 	 * Adds an animal into the group
 	 * @param animal
 	 */
-	public void addAnimal(Animal animal) {
+	public AnimalGroup addAnimal(Animal animal) {
 		this.animals.add(animal);
+		return this;
 	}
 	
 	/**
 	 * Removes an animal from the group
 	 * @param animal
 	 */
-	public void removeAnimal(Animal animal) {
+	public AnimalGroup removeAnimal(Animal animal) {
 		this.animals.remove(animal);
+		return this;
 	}
 }

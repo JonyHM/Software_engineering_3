@@ -88,4 +88,5 @@ public class Bovine extends Animal {
 				+ "\nWeight: " + String.format("%.2f", this.weight) + weightUnity
 				+ "\nCost per" + weightUnity + ": R$ " + String.format("%.2f", this.value);
 	}
+
 }
