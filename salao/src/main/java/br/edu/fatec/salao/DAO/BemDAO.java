@@ -23,8 +23,11 @@ public class BemDAO {
 
 	public void salvar(Bem bem) {
 		Transaction transaction = null;
+		Session session = null;
 		
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+					
 			System.out.println("---------------------Criando bem------------------------------");
 			System.out.println(bem);
 			
@@ -43,19 +46,25 @@ public class BemDAO {
 			}
 			
 			e.printStackTrace();
+		} finally {
+			session.close();
 		}
 	}
 	
 	public List<Bem> recuperaBens() {
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			return session.createQuery("from Bem", Bem.class).getResultList();
+		List<Bem> bens = new ArrayList<Bem>();
+		Session session = null;
+		
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			bens = session.createQuery("from Bem", Bem.class).getResultList();
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ArrayList<Bem>();
+		} finally {
+			session.close();
 		}
+		
+		return bens; 
 	}
 	
-	public void drop() {
-		
-	}
 }

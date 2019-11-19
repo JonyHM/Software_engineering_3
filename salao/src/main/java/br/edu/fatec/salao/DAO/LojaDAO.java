@@ -21,8 +21,10 @@ public class LojaDAO {
 
 	public void salvar(Loja loja) {
 		Transaction transaction = null;
+		Session session = null;
 		
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
 			System.out.println("--------------------------Criando Unidade-------------------------");
 			System.out.println(loja.getUnidade());
 			
@@ -41,20 +43,26 @@ public class LojaDAO {
 			}
 			
 			e.printStackTrace();
+		} finally {
+			session.close();
 		}
 	}
 	
 
 	public Loja pegarPorUnidade(String unidade) {
 		Loja loja = new Loja();
+		Session session = null;
 		
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
 			loja = session.createQuery("SELECT DISTINCT l FROM Loja l "
 					+ "LEFT JOIN FETCH l.clientes "
 					+ "WHERE l.unidade=:unidade", 
 					Loja.class).setParameter("genero", unidade).getSingleResult();
 		} catch (HibernateException e) {
 			e.getCause().getLocalizedMessage();
+		} finally {
+			session.close();
 		}
 		
 		return loja;

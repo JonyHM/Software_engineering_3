@@ -23,8 +23,10 @@ public class CompraDAO {
 
 	public void salvar(Compra compra) {
 		Transaction transaction = null;
+		Session session = null;
 		
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();			
 			System.out.println("--------------------------Criando compra-------------------------");
 			System.out.println("Cliente: " + compra.getCliente());
 			
@@ -43,17 +45,26 @@ public class CompraDAO {
 			}
 			
 			e.printStackTrace();
+		} finally {
+			session.close();
 		}
 	}
 	
 	public List<Compra> recuperaCompras() {
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+		List<Compra> compras = new ArrayList<Compra>(); 
+		Session session = null;
+		
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
 			System.out.println("Compras Encontradas");
-			return session.createQuery("SELECT DISTINCT c FROM Compra c LEFT JOIN FETCH c.bens ORDER BY c.data ASC", Compra.class).list();
+			compras = session.createQuery("SELECT DISTINCT c FROM Compra c LEFT JOIN FETCH c.bens ORDER BY c.data ASC", Compra.class).list();
 		} catch (Exception e) {
 			System.out.println("Nenhuma Compra Encontrada");
 			e.printStackTrace();
-			return new ArrayList<Compra>();
+		} finally {
+			session.close();
 		}
+		
+		return compras; 
 	}
 }

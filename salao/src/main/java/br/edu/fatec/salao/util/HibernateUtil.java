@@ -30,10 +30,16 @@ public class HibernateUtil {
                 settings.put(Environment.PASS, "");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.H2Dialect");
                 settings.put(Environment.JDBC_TIME_ZONE, "UTC");
-//                settings.put(Environment.SHOW_SQL, "true");
-//                settings.put(Environment.FORMAT_SQL, "true");
+                settings.put(Environment.SHOW_SQL, "true");
+                settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
                 settings.put(Environment.HBM2DDL_AUTO, "update");
+                settings.put(Environment.C3P0_MAX_SIZE, 100);
+                settings.put(Environment.C3P0_MIN_SIZE, 1);
+                settings.put(Environment.C3P0_ACQUIRE_INCREMENT, 2);
+                settings.put(Environment.C3P0_MAX_STATEMENTS, 1000);
+                settings.put(Environment.C3P0_TIMEOUT, 7200);
+                
                 configuration.setProperties(settings);
                 
                 configuration.addAnnotatedClass(Bem.class);
