@@ -8,9 +8,10 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
-import br.edu.fatec.salao.model.Bem;
-import br.edu.fatec.salao.model.Cliente;
-import br.edu.fatec.salao.model.Compra;
+import br.edu.fatec.salao.model.entity.Bem;
+import br.edu.fatec.salao.model.entity.Cliente;
+import br.edu.fatec.salao.model.entity.Compra;
+import br.edu.fatec.salao.model.entity.Loja;
 
 public class HibernateUtil {
 	
@@ -21,21 +22,25 @@ public class HibernateUtil {
         	try {
             	Configuration configuration = new Configuration();
             	
-                // Hibernate settings equivalent to hibernate.cfg.xml's properties
+                // Configurações do Hibernate que substituem o arquivo hibernate.cfg.xml
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "org.h2.Driver");
-                settings.put(Environment.URL, "jdbc:h2:./test");
+                settings.put(Environment.URL, "jdbc:h2:./db/contatos");
                 settings.put(Environment.USER, "sa");
                 settings.put(Environment.PASS, "");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.H2Dialect");
-                settings.put(Environment.SHOW_SQL, "true");
+                settings.put(Environment.JDBC_TIME_ZONE, "UTC");
+//                settings.put(Environment.SHOW_SQL, "true");
+//                settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+                settings.put(Environment.HBM2DDL_AUTO, "update");
                 configuration.setProperties(settings);
+                
+                configuration.addAnnotatedClass(Bem.class);
+                configuration.addAnnotatedClass(Compra.class);
                 configuration.addAnnotatedClass(Cliente.class);
-//                configuration.addAnnotatedClass(Compra.class);
-//                configuration.addAnnotatedClass(Bem.class);
-//                
+                configuration.addAnnotatedClass(Loja.class);
+                
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 		.applySettings(
                 				configuration.getProperties())

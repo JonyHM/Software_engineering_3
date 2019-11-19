@@ -3,7 +3,7 @@ package br.edu.fatec.salao.controller;
 import java.util.List;
 
 import br.edu.fatec.salao.DAO.BemDAO;
-import br.edu.fatec.salao.model.Bem;
+import br.edu.fatec.salao.model.entity.Bem;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
@@ -17,8 +17,9 @@ public class BemController {
 				: controller;
 	}
 	
-	public void criar(Bem bem) {
+	public BemController criar(Bem bem) {
 		BemDAO.getInstance().salvar(bem);
+		return this;
 	}
 	
 	public List<Bem> listar() {

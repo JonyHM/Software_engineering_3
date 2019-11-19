@@ -1,11 +1,12 @@
 package br.edu.fatec.salao.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import br.edu.fatec.salao.model.Bem;
+import br.edu.fatec.salao.model.entity.Bem;
 import br.edu.fatec.salao.util.HibernateUtil;
 import lombok.NoArgsConstructor;
 
@@ -24,8 +25,8 @@ public class BemDAO {
 		Transaction transaction = null;
 		
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			System.out.println("---------------------------------------------------");
-			System.out.println("Criando bem: " + bem.getNome());
+			System.out.println("---------------------Criando bem------------------------------");
+			System.out.println(bem);
 			
 			// Iniciando a Transação
 			transaction = session.beginTransaction();
@@ -47,7 +48,14 @@ public class BemDAO {
 	
 	public List<Bem> recuperaBens() {
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			return session.createQuery("from bem", Bem.class).list();
+			return session.createQuery("from Bem", Bem.class).getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ArrayList<Bem>();
 		}
+	}
+	
+	public void drop() {
+		
 	}
 }

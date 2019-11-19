@@ -1,16 +1,19 @@
-package br.edu.fatec.salao.model;
+package br.edu.fatec.salao.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.sun.istack.Nullable;
-
+import br.edu.fatec.salao.model.enums.Tipo;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 
@@ -18,9 +21,11 @@ import lombok.Data;
  *
  */
 @Data
-@Entity
+@Entity	
 @Builder(toBuilder = true)
 @Table(name = "BEM")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bem {
 
 	@Id
@@ -35,9 +40,15 @@ public class Bem {
 	private Double valor;
 	
 	@Column(name = "BEM_TIPO", nullable = false)
+	@Enumerated(EnumType.STRING)
 	private Tipo tipo;
 	
-	@Column(name = "BEM_DETALHES", nullable = true)
-	@Nullable
-	private String detalhes;
+	
+	@Override
+	public String toString() {
+		return "\nNome: " + this.nome
+				+ "\nTipo: " + this.tipo.toString()
+				+ "\nValor: R$" + this.valor;
+	}
+
 }
