@@ -17,20 +17,18 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
 import br.edu.fatec.salao.model.enums.Genero;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 /**
  * @author Jonathas
@@ -38,10 +36,9 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Entity
-@Builder(toBuilder = true)
 @Table(name = "CLIENTE")
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class Cliente {
 
 	@Id
@@ -50,26 +47,27 @@ public class Cliente {
 	private long id;
 	
 	@Column(name = "CLI_NOME", nullable = false)
+	@NonNull
 	private String nome;
 	
 	@Column(name = "CLI_TELEFONE", nullable = false)
+	@NonNull
 	private String telefone;
 	
 	@Column(name = "CLI_DATA_NASC", nullable = false, columnDefinition = "DATE")
 	@Temporal(TemporalType.DATE)
+	@NonNull
 	private Date dataNascimento;
 	
 	@Column(name = "CLI_GENERO", nullable = true)
 	@Enumerated(EnumType.STRING)
+	@NonNull
 	private Genero genero;
 	
-	@Column(name = "CLI_COMPRAS")
-	@OneToMany(mappedBy = "cliente", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
-	@Builder.Default
-	@Fetch(FetchMode.SUBSELECT)
+	@JoinColumn(name = "CLI_COMPRAS")
+	@OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
 	private List<Compra> compras = new ArrayList<>();
 	
-	@Builder.Default
 	@Transient
 	private SimpleDateFormat dateForm = new SimpleDateFormat("dd-MM-yyyy");
 	
@@ -79,7 +77,6 @@ public class Cliente {
 	 */
 	public void comprar(Compra compra) {
 		this.compras.add(compra);
-		compra.setCliente(this);
 	}
 	
 	private String listaProdutos() {	

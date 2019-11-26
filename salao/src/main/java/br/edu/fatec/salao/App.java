@@ -3,185 +3,82 @@ package br.edu.fatec.salao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import br.edu.fatec.salao.controller.BemController;
+import br.edu.fatec.salao.controller.CadastroController;
 import br.edu.fatec.salao.controller.ClienteController;
 import br.edu.fatec.salao.controller.CompraController;
 import br.edu.fatec.salao.controller.LojaController;
 import br.edu.fatec.salao.model.entity.Bem;
+import br.edu.fatec.salao.model.entity.Cadastro;
 import br.edu.fatec.salao.model.entity.Cliente;
 import br.edu.fatec.salao.model.entity.Compra;
 import br.edu.fatec.salao.model.entity.Loja;
 import br.edu.fatec.salao.model.enums.Genero;
 import br.edu.fatec.salao.model.enums.Tipo;
+import br.edu.fatec.salao.resource.ReportResource;
 
 public class App {
     
 	public static void main( String[] args ) throws ParseException {
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+
+//-------------------------------------------------------------------------------------------------
+// Criando lojas
+		
+		Cadastro cadastro = new Cadastro();
 		
 //-------------------------------------------------------------------------------------------------
 // Criando lojas		
 
-		Loja loja1 = Loja.builder()
-				.unidade("São José dos Campos")
-				.build();
+		Loja loja1 = new Loja("São José dos Campos", cadastro);
 		
 //-------------------------------------------------------------------------------------------------
 // Criando clientes
 		
-		Cliente cliente1 = Cliente.builder()
-				.nome("José da Silva")
-				.telefone("3456-7891")
-				.dataNascimento(formatter.parse("21-03-1995"))
-				.genero(Genero.MASCULINO)
-				.build();
-		
-		Cliente cliente2 = Cliente.builder()
-				.nome("Fernanda Castro")
-				.telefone("3761-4652")
-				.dataNascimento(formatter.parse("10-05-1998"))
-				.genero(Genero.FEMININO)
-				.build();
-		
-		Cliente cliente3 = Cliente.builder()
-				.nome("Angela Fernandes")
-				.telefone("3953-6541")
-				.dataNascimento(formatter.parse("15-07-1993"))
-				.genero(Genero.FEMININO)
-				.build();
+		Cliente cliente1 = new Cliente("José da Silva", "3456-7891", formatter.parse("21-03-1995"), Genero.MASCULINO);
+		Cliente cliente2 = new Cliente("Fernanda Castro", "3761-4652", formatter.parse("10-05-1998"), Genero.FEMININO);
+		Cliente cliente3 = new Cliente("Angela Fernandes", "3953-6541", formatter.parse("15-07-1993"), Genero.FEMININO);
 		
 //-------------------------------------------------------------------------------------------------			
 // Criando itens
 			
-		Bem modelagem = Bem.builder()
-				.nome("Modelagem de barba")
-				.valor(23.0)
-				.tipo(Tipo.SERVICO)
-				.build();
+		Bem modelagem = new Bem("Modelagem de barba", 23.0, Tipo.SERVICO);
+		Bem corteBarba = new Bem("Corte de barba", 12.0, Tipo.SERVICO);
+		Bem queda = new Bem("Tratamento para queda de cabelo", 125.70, Tipo.SERVICO);
+		Bem cremeBarba = new Bem("Creme pós barba", 23.35, Tipo.PRODUTO);
+		Bem pedicure = new Bem("Pedicure", 15.30, Tipo.SERVICO);
+		Bem design = new Bem("Design de Sobrancelhas", 55.50, Tipo.SERVICO);
+		Bem pintura = new Bem("Tingimento de cabelo", 27.75, Tipo.SERVICO);
+		Bem rugas = new Bem("Remoção de rugas", 75.50, Tipo.SERVICO);
+		Bem manchas = new Bem("Remoção de manchas", 80.0, Tipo.SERVICO);
+		Bem botox = new Bem("Aplicação de botox", 125.5, Tipo.SERVICO);
+		Bem emagrecimento = new Bem("Tratamento para emagrecimento", 275.0, Tipo.SERVICO);
+		Bem medidas = new Bem("Redução de medidas", 127.20, Tipo.SERVICO);
+		Bem corte = new Bem("Corte Masculino", 12.25, Tipo.SERVICO);
+		Bem shampoo = new Bem("Shampoo de cerveja", 24.12, Tipo.PRODUTO);
+		Bem corteFeminino = new Bem("Corte Feminino", 27.30, Tipo.SERVICO);
+		Bem hidratacao = new Bem("Hidratação", 15.50, Tipo.SERVICO);
+		Bem manicure = new Bem("Manicure", 10.0, Tipo.SERVICO);
 		
-		Bem corteBarba = Bem.builder()
-				.nome("Corte de barba")
-				.valor(12.0)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem queda = Bem.builder()
-				.nome("Tratamento para queda de cabelo")
-				.valor(125.70)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem cremeBarba = Bem.builder()
-				.nome("Creme pós barba")
-				.valor(23.35)
-				.tipo(Tipo.PRODUTO)
-				.build();
-		
-		Bem pedicure = Bem.builder()
-				.nome("Pedicure")
-				.valor(15.30)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem design = Bem.builder()
-				.nome("Design de Sobrancelhas")
-				.valor(55.50)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem pintura = Bem.builder()
-				.nome("Tingimento de cabelo")
-				.valor(27.75)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem rugas = Bem.builder()
-				.nome("Remoção de rugas")
-				.valor(75.50)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem manchas = Bem.builder()
-				.nome("Remoção de manchas")
-				.valor(80.0)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem botox = Bem.builder()
-				.nome("Aplicação de botox")
-				.valor(125.5)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem emagrecimento = Bem.builder()
-				.nome("Tratamento para emagrecimento")
-				.valor(275.0)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem medidas = Bem.builder()
-				.nome("Redução de medidas")
-				.valor(127.20)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem corte = Bem.builder()
-				.nome("Corte Masculino")
-				.valor(12.25)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem shampoo = Bem.builder()
-				.nome("Shampoo de cerveja")
-				.valor(24.12)
-				.tipo(Tipo.PRODUTO)
-				.build();
-		
-		Bem corteFeminino = Bem.builder()
-				.nome("Corte Feminino")
-				.valor(27.30)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem hidratacao = Bem.builder()
-				.nome("Hidratação")
-				.valor(15.50)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-		Bem manicure = Bem.builder()
-				.nome("Manicure")
-				.valor(10.0)
-				.tipo(Tipo.SERVICO)
-				.build();
-		
-//-------------------------------------------------------------------------------------------------			      
+//-------------------------------------------------------------------------------------------------
 // Persistindo Bens		
 		
 		BemController bemController = BemController.getInstance()
 				.criar(corte).criar(cremeBarba).criar(modelagem).criar(medidas)
 				.criar(emagrecimento).criar(manchas).criar(corteFeminino).criar(shampoo)
-				.criar(hidratacao).criar(manicure).criar(corteBarba).criar(queda).criar(botox)
-				.criar(pedicure).criar(design).criar(pintura).criar(rugas);
+				.criar(hidratacao).criar(manicure);
 		
 //-------------------------------------------------------------------------------------------------			      
 // Criando Compras
 		
-		Compra compra1 = Compra.builder()
-				.data(formatter.parse("10-11-2019"))
-				.observacao("Se sobrar cabelo, platina tudo e confirma se posso beber o shampoo")
-				.build();
-
-		Compra compra2 = Compra.builder()
-				.data(formatter.parse("15-11-2019"))
-				.build();
-		
-		Compra compra3 = Compra.builder()
-				.data(formatter.parse("16-11-2019"))
-				.build();
+		Compra compra1 = new Compra(formatter.parse("10-11-2019"), "Se sobrar cabelo, platina tudo e confirma se posso beber o shampoo");
+		Compra compra2 = new Compra(formatter.parse("15-11-2019"));
+		Compra compra3 = new Compra(formatter.parse("16-11-2019"));
 		
 //-------------------------------------------------------------------------------------------------		
 // Associando item à compra
@@ -205,19 +102,21 @@ public class App {
 		
 //-------------------------------------------------------------------------------------------------		
 // Persistindo lojas, clientes e Compras
-
-		LojaController lojaController = LojaController.getInstance()
-				.criar(loja1);
+		
+		CompraController compraController = CompraController.getInstance()
+				.criar(compra1)
+				.criar(compra2)
+				.criar(compra3);
 		
 		ClienteController clienteController = ClienteController.getInstance()
 				.criar(cliente1)
 				.criar(cliente2)
 				.criar(cliente3);
 		
-		CompraController compraController = CompraController.getInstance()
-				.criar(compra1)
-				.criar(compra2)
-				.criar(compra3);
+		CadastroController.getInstance().criar(cadastro);
+
+		LojaController lojaController = LojaController.getInstance()
+				.criar(loja1);
 		
 //-------------------------------------------------------------------------------------------------        
 // Listagem
@@ -249,7 +148,7 @@ public class App {
 // Editando cadastro
         
         System.out.println("\n");
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("------------------------------Editando cadastro-------------------------------");
         System.out.println("Editando");
         
         Cliente clienteAEditar = clienteController.procurarPorId(1l);        
@@ -266,7 +165,7 @@ public class App {
 // Excluindo cadastro
         
         System.out.println("\n");
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("---------------------------Excluindo cadastro----------------------------------");
         System.out.println("Antes");
         
         List<Cliente> total = clienteController.listar();
@@ -291,7 +190,7 @@ public class App {
 // Listando mulheres
         
         System.out.println("\n");
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("-------------------------Listando mulheres------------------------------------");
         List<Cliente> mulheres = clienteController.listarPorGenero(Genero.FEMININO);
         System.out.println(mulheres.size() + " mulheres cadastradas");
         mulheres.forEach(System.out::println);
@@ -299,15 +198,35 @@ public class App {
         
 //-------------------------------------------------------------------------------------------------        
 // Relatórios
-//        Qual é a idade média de todo o público de uma unidade.
-//        Qual é a idade média do público para um determinado gênero.
-//        Qual é o serviço mais procurado para todo o público.
-//        Qual é o seriço mais procurado para um determinado gênero.
+//Idade média de uma unidade
         
         System.out.println("\n");
         System.out.println("--------------------------------Idade média de uma unidade-----------------------------");
         Loja SJC = lojaController.pegarPorUnidade("São José dos Campos");
-        List<Cliente> deSJC = SJC.getClientes(); 
-        deSJC.forEach(System.out::println);
+        Set<Cliente> deSJC = SJC.getCadastros().getClientes(); 
+        Double media = ReportResource.average(deSJC);
+        System.out.println("Média de idade de clientes" + media);
+        System.out.println("-----------------------------------------------------------------------------------------");
+
+//-------------------------------------------------------------------------------------------------
+//Idade média de um gênero
+        
+        System.out.println("\n");
+        System.out.println("--------------------------------Idade média de um gênero-----------------------------");
+        List<Cliente> feminino = clienteController.listarPorGenero(Genero.FEMININO);
+        Double mediaFeminina = ReportResource.average(new HashSet<Cliente>(feminino));
+        System.out.println("Média de idade de Mulheres" + mediaFeminina);
+        System.out.println("-----------------------------------------------------------------------------------------");
+        
+//--------------------------------------------------------------------------------------------------
+//Serviço mais procurado        
+        
+        System.out.println("\n");
+        System.out.println("--------------------------------Serviço mais procurado-----------------------------");
+        Bem maisProcutado = bemController.maisProcurado();
+        System.out.println(maisProcutado);
+        System.out.println("-----------------------------------------------------------------------------------------");
+//--------------------------------------------------------------------------------------------------        
+//      Qual é o serviço mais procurado para um determinado gênero.
     }
 }

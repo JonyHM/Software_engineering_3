@@ -10,10 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import br.edu.fatec.salao.model.enums.Tipo;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 /**
  * 
@@ -22,10 +22,9 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Entity	
-@Builder(toBuilder = true)
 @Table(name = "BEM")
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class Bem {
 
 	@Id
@@ -34,13 +33,16 @@ public class Bem {
 	private long id;
 	
 	@Column(name = "BEM_NOME", nullable = false)
+	@NonNull
 	private String nome;
 	
 	@Column(name = "BEM_VALOR", nullable = false)
+	@NonNull
 	private Double valor;
 	
 	@Column(name = "BEM_TIPO", nullable = false)
 	@Enumerated(EnumType.STRING)
+	@NonNull
 	private Tipo tipo;
 	
 	

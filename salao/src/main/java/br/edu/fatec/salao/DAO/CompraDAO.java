@@ -28,7 +28,6 @@ public class CompraDAO {
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();			
 			System.out.println("--------------------------Criando compra-------------------------");
-			System.out.println("Cliente: " + compra.getCliente());
 			
 			// Iniciando a Transação
 			transaction = session.beginTransaction();

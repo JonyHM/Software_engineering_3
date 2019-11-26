@@ -3,6 +3,7 @@ package br.edu.fatec.salao.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -39,6 +40,7 @@ public class BemDAO {
 			
 			System.out.println("------------Bem criado com sucesso!------------");
 			transaction.commit();		
+			session.close();
 		} catch (Exception e) {
 			if(transaction != null) {				
 				System.out.println("\n...Retornando ao ponto anterior...");
@@ -46,8 +48,6 @@ public class BemDAO {
 			}
 			
 			e.printStackTrace();
-		} finally {
-			session.close();
 		}
 	}
 	
@@ -65,6 +65,26 @@ public class BemDAO {
 		}
 		
 		return bens; 
+	}
+	
+	// Criar query para pegar isso
+	public Bem pegaTopServico() {
+		Bem bem= new Bem();
+		Session session = null;
+		
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			bem = (Bem) session.createSQLQuery("SELECT b, count(*) FROM Compra c, Bem b "
+					+ "WHERE c.COMP_BEM=b.BEM_ID GROUP BY b.BEM_NOME "
+					+ "HAVING count(*)=(SELECT MAX(count(b.BEM_ID)) FROM Compra c, BEM b "
+					+ "WHERE c.COMP_BEM=b.BEM_ID GROUP BY b.BEM_NOME);").getSingleResult();
+		} catch (HibernateException e) {
+			e.getCause().getLocalizedMessage();
+		} finally {
+			session.close();
+		}
+		
+		return bem;
 	}
 	
 }

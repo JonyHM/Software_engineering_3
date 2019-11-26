@@ -56,9 +56,9 @@ public class LojaDAO {
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();
 			loja = session.createQuery("SELECT DISTINCT l FROM Loja l "
-					+ "LEFT JOIN FETCH l.clientes "
+					+ "LEFT JOIN FETCH l.cadastros "
 					+ "WHERE l.unidade=:unidade", 
-					Loja.class).setParameter("genero", unidade).getSingleResult();
+					Loja.class).setParameter("unidade", unidade).getSingleResult();
 		} catch (HibernateException e) {
 			e.getCause().getLocalizedMessage();
 		} finally {
@@ -67,4 +67,5 @@ public class LojaDAO {
 		
 		return loja;
 	}
+
 }

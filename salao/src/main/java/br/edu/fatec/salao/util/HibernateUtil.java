@@ -9,6 +9,7 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import br.edu.fatec.salao.model.entity.Bem;
+import br.edu.fatec.salao.model.entity.Cadastro;
 import br.edu.fatec.salao.model.entity.Cliente;
 import br.edu.fatec.salao.model.entity.Compra;
 import br.edu.fatec.salao.model.entity.Loja;
@@ -30,8 +31,8 @@ public class HibernateUtil {
                 settings.put(Environment.PASS, "");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.H2Dialect");
                 settings.put(Environment.JDBC_TIME_ZONE, "UTC");
-                settings.put(Environment.SHOW_SQL, "true");
-                settings.put(Environment.FORMAT_SQL, "true");
+//                settings.put(Environment.SHOW_SQL, "true");
+//                settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
                 settings.put(Environment.HBM2DDL_AUTO, "update");
                 settings.put(Environment.C3P0_MAX_SIZE, 100);
@@ -46,6 +47,7 @@ public class HibernateUtil {
                 configuration.addAnnotatedClass(Compra.class);
                 configuration.addAnnotatedClass(Cliente.class);
                 configuration.addAnnotatedClass(Loja.class);
+                configuration.addAnnotatedClass(Cadastro.class);
                 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 		.applySettings(

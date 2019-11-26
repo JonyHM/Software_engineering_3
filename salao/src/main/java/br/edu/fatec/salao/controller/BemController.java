@@ -25,4 +25,8 @@ public class BemController {
 	public List<Bem> listar() {
 		return BemDAO.getInstance().recuperaBens();
 	}
+	
+	public Bem maisProcurado() {
+		return BemDAO.getInstance().pegaTopServico();
+	}
 }
