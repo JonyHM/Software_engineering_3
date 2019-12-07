@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -43,6 +44,7 @@ public class Compra {
 	
 	@JoinColumn(name = "COMP_BEM")
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+	@ElementCollection
 	private List<Bem> bens = new ArrayList<>();
 	
 	@Column(name = "COMP_DATA", nullable = false, columnDefinition = "DATE")

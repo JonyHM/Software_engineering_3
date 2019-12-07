@@ -67,24 +67,34 @@ public class BemDAO {
 		return bens; 
 	}
 	
-	// Criar query para pegar isso
 	public Bem pegaTopServico() {
-		Bem bem= new Bem();
+		Bem bem = new Bem();
+		List<Bem> bens = totalBensComprados();
+		bens.forEach(b -> {
+			System.out.println(b);
+		});
+		System.out.println(bem);
+		return bem;
+	}
+	
+	private List<Bem> totalBensComprados() {
+//		Bem bem = new Bem();
+		List<Bem> bens = new ArrayList<>();
 		Session session = null;
 		
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();
-			bem = (Bem) session.createSQLQuery("SELECT b, count(*) FROM Compra c, Bem b "
-					+ "WHERE c.COMP_BEM=b.BEM_ID GROUP BY b.BEM_NOME "
-					+ "HAVING count(*)=(SELECT MAX(count(b.BEM_ID)) FROM Compra c, BEM b "
-					+ "WHERE c.COMP_BEM=b.BEM_ID GROUP BY b.BEM_NOME);").getSingleResult();
+			bens = session.createQuery("SELECT c.bens FROM Compra c JOIN c.bens bens "
+					+ "ORDER BY bens.id DESC", 
+					Bem.class)
+			.getResultList();
+			
 		} catch (HibernateException e) {
 			e.getCause().getLocalizedMessage();
 		} finally {
 			session.close();
 		}
 		
-		return bem;
+		return bens;
 	}
-	
 }

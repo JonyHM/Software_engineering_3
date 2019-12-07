@@ -48,15 +48,15 @@ public class App {
 // Criando itens
 			
 		Bem modelagem = new Bem("Modelagem de barba", 23.0, Tipo.SERVICO);
-		Bem corteBarba = new Bem("Corte de barba", 12.0, Tipo.SERVICO);
-		Bem queda = new Bem("Tratamento para queda de cabelo", 125.70, Tipo.SERVICO);
+//		Bem corteBarba = new Bem("Corte de barba", 12.0, Tipo.SERVICO);
+//		Bem queda = new Bem("Tratamento para queda de cabelo", 125.70, Tipo.SERVICO);
 		Bem cremeBarba = new Bem("Creme pós barba", 23.35, Tipo.PRODUTO);
-		Bem pedicure = new Bem("Pedicure", 15.30, Tipo.SERVICO);
-		Bem design = new Bem("Design de Sobrancelhas", 55.50, Tipo.SERVICO);
-		Bem pintura = new Bem("Tingimento de cabelo", 27.75, Tipo.SERVICO);
-		Bem rugas = new Bem("Remoção de rugas", 75.50, Tipo.SERVICO);
+//		Bem pedicure = new Bem("Pedicure", 15.30, Tipo.SERVICO);
+//		Bem design = new Bem("Design de Sobrancelhas", 55.50, Tipo.SERVICO);
+//		Bem pintura = new Bem("Tingimento de cabelo", 27.75, Tipo.SERVICO);
+//		Bem rugas = new Bem("Remoção de rugas", 75.50, Tipo.SERVICO);
 		Bem manchas = new Bem("Remoção de manchas", 80.0, Tipo.SERVICO);
-		Bem botox = new Bem("Aplicação de botox", 125.5, Tipo.SERVICO);
+//		Bem botox = new Bem("Aplicação de botox", 125.5, Tipo.SERVICO);
 		Bem emagrecimento = new Bem("Tratamento para emagrecimento", 275.0, Tipo.SERVICO);
 		Bem medidas = new Bem("Redução de medidas", 127.20, Tipo.SERVICO);
 		Bem corte = new Bem("Corte Masculino", 12.25, Tipo.SERVICO);
@@ -221,11 +221,11 @@ public class App {
 //--------------------------------------------------------------------------------------------------
 //Serviço mais procurado        
         
-        System.out.println("\n");
-        System.out.println("--------------------------------Serviço mais procurado-----------------------------");
-        Bem maisProcutado = bemController.maisProcurado();
-        System.out.println(maisProcutado);
-        System.out.println("-----------------------------------------------------------------------------------------");
+//        System.out.println("\n");
+//        System.out.println("--------------------------------Serviço mais procurado-----------------------------");
+//        Bem maisProcutado = bemController.maisProcurado();
+//        System.out.println(maisProcutado);
+//        System.out.println("-----------------------------------------------------------------------------------------");
 //--------------------------------------------------------------------------------------------------        
 //      Qual é o serviço mais procurado para um determinado gênero.
     }
